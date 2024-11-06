@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".User.List_Add_Friend_Activity">
+
+    <!--- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back_arrow"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="35dp"
+            android:text="Friends"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/social_media"/>
+
+
+    </LinearLayout>
+
+    <!--- Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--- Request -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:text="Friend requests"
+                    android:textStyle="bold"
+                    android:paddingLeft="12dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="See all"
+                    android:gravity="right|center"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue"/>
+
+            </LinearLayout>
+
+            <!--- RecyclerView -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewaddfriend1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
